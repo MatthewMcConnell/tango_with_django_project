@@ -1,6 +1,8 @@
 import os
 os.environ.setdefault ("DJANGO_SETTINGS_MODULE", "tango_with_django_project.settings")
 
+from random import randint
+
 import django
 django.setup()
 from rango.models import Category, Page
@@ -47,10 +49,10 @@ def populate ():
         for p in Page.objects.filter (category = c):
             print ("- {0} - {1}".format (str(c), str(p)))
 
-def add_page (cat, title, url, views = 0):
+def add_page (cat, title, url):
     p = Page.objects.get_or_create (category = cat, title = title)[0]
     p.url = url
-    p.views = views
+    p.views = randint (1, 20)
     p.save()
     return p
 
