@@ -1,0 +1,15 @@
+We will assume that a page can only belong to one category and that a category can have many pages
+(if we want the same page to multiple categories then we need to make 2 instances of that page (not ideal))
+
+Category Model:
+field | type
+name    charfield
+views   integerfield
+likes   integerfield
+
+Page Model:
+field | type
+category ForeignKey
+title   charfield
+url     URLfield
+views   integerfield
