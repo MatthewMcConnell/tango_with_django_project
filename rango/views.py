@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 from django.shortcuts import render
+=======
+>>>>>>> 721f9ac... Added an about page and updated settings to allow for a '127.0.0.1' host
 from django.http import HttpResponse
 from rango.models import Category, Page
 from rango.forms import CategoryForm, PageForm
 
 def index (request):
+<<<<<<< HEAD
     # Querying the database and getting the top 5 liked categories to 
     # put into context_dict
     category_list = Category.objects.order_by ("-likes") [:5]
@@ -19,6 +23,7 @@ def index (request):
 
 def about (request):
     return render (request, "rango/about.html")
+<<<<<<< HEAD
 
 def show_category (request, category_name_slug):
     # Creating a context dictionary to pass to render
@@ -96,3 +101,11 @@ def add_page (request, category_name_slug):
     context_dict = {"form": form, "category": category}
     return render (request, "rango/add_page.html", context_dict)
 
+=======
+>>>>>>> 5c819d4... Modified the about view to use a newly created about.html template
+=======
+    return HttpResponse ("Rango says hey there partner!<br/><a href='/rango/about'>About</a>")
+
+def about (request):
+    return HttpResponse ("Rango says here is the about page.<br/><a href='/rango/'>Index</a>")
+>>>>>>> 721f9ac... Added an about page and updated settings to allow for a '127.0.0.1' host
