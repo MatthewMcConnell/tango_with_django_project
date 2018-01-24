@@ -122,3 +122,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
+
+
+# Redirection link if user isn't logged in and is required to
+
+LOGIN_URL = "/rango/login/"
+
+
