@@ -6,12 +6,12 @@
 {% endblock %}
 
 {% block body_block %}
-    <h1>About Page</h1>
+    <h1>Register for Rango</h1>
     {% if registered %}
         Rango says: <strong>thank you for registering!</strong>
-        <a href="/rango/">Return to the homepages.</a><br>
+        <a href="{% url 'index' %}">Return to the homepages.</a><br />
     {% else %}
-        Rango says: <strong>register here!</strong><br>
+        Rango says: <strong>register here!</strong><br />
         <form id="user_form" action="/rango/register/" method="post" enctype="multipart/form-data">
             {% csrf_token %}
 

@@ -186,7 +186,7 @@ def user_login (request):
         else:
             # Bad login details were provided. So we can't log the user in.
             print ("Invalid login details: {0}, {1}".format (username, password))
-            return HttpResponse ("Either you have not registered or you entered your username of password incorrectly")
+            return HttpResponse ("Invalid login details supplied: " + username + "; " + password + ".")
     
     # The request is not POST, so display the login form
     else:
