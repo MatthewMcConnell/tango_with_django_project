@@ -137,3 +137,9 @@ MEDIA_URL = "/media/"
 LOGIN_URL = "/rango/login/"
 
 
+# Cookies sessions variables
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+
+

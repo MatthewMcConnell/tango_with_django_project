@@ -9,5 +9,8 @@
     Rango says here is the about page.<br />
     <img src="{{ MEDIA_URL }}cat.jpg" alt="Thug Cat Pic"/><br />
     <img src="{% static 'images/coolAppa.jpg' %}" alt="Cool Appa"><br>
-    This tutorial has been put together by Matthew McConnell
+    <p>
+        This tutorial has been put together by Matthew McConnell <br>
+        Visits: {{ visits }}
+    </p>
 {% endblock %}
